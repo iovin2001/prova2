@@ -17,24 +17,14 @@ const networks = {
 };
 
 // Importa Navbar normalmente poiché non si prevede che utilizzi localStorage
-import Navbar from "../components/navbar/navbar";
-
-// Usa l'importazione dinamica per Plot e qualsiasi altro componente che dipende da WalletProvider
-const Plot = dynamic(() => import('../components/plot/plot'), {
-  ssr: false // Disabilita il rendering lato server per questo componente
-});
 
 // Se WalletProvider fosse stato un componente che hai intenzione di utilizzare direttamente in Home,
 // dovresti importarlo dinamicamente allo stesso modo se dipende da localStorage o altre API del browser.
 
+import Image from 'next/image'
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
-  // Gestisce il rendering condizionale lato client per i componenti che dipendono da WalletProvider
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Una volta montato il componente, consideralo lato client
-  }, []);
-
   const router = useRouter();
   return (
     <div className="grid grid-cols-8 gap-4 gap-x-12 py-32 my-16 h-4">

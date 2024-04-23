@@ -1,26 +1,5 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
-import '@mysten/dapp-kit/dist/index.css';
-import { SuiClientProvider } from '@mysten/dapp-kit';
-import { WalletProvider } from '@mysten/dapp-kit';
-
-import { getFullnodeUrl } from '@mysten/sui.js/client';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import dynamic from 'next/dynamic';
-
-const queryClient = new QueryClient();
-const networks = {
-  devnet: { url: getFullnodeUrl('devnet') },
-  testnet: { url: getFullnodeUrl('testnet') },
-  mainnet: { url: getFullnodeUrl('mainnet') },
-};
-
-// Importa Navbar normalmente poiché non si prevede che utilizzi localStorage
-
-// Se WalletProvider fosse stato un componente che hai intenzione di utilizzare direttamente in Home,
-// dovresti importarlo dinamicamente allo stesso modo se dipende da localStorage o altre API del browser.
-
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 
@@ -56,7 +35,34 @@ export default function Home() {
           </span>
           
         </div>
-     </div>
+        <div className="flex flex-col items-center my-10 py-10">
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/place");
+            }}
+            type="button"
+            style={{
+              boxShadow: "0px 0px 0px 3px rgba(178,146,85,0.7)",
+            }}
+            className="glow-buttonblue flex items-center p-4 transition ease-in duration-200 uppercase rounded-full hover:bg-buttonblue hover:text-grey hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border border-cyan-900 focus:outline-none bg-white text-black gap-x-2 font-ethnocentric"
+          >
+            Launch App
+            <Image
+              height={20}
+              width={20}
+              src="/images/sui_dark.svg"
+              alt="Wallet"
+              className={
+                "rounded-full border-blue justify-center text-center items-center"
+              }
+            />
+          </button>
+        </div>
+      </div>
+        <div className="w-full col-start-5 col-end-8 h-full p-0 m-0">
+          <Image src={"/images/logo.png"} height={500} width={350} alt={"minesweeper"} />
+        </div>
     </div>
   )
 }

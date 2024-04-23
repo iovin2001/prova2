@@ -48,21 +48,11 @@ export default function Home() {
             className="glow-buttonblue flex items-center p-4 transition ease-in duration-200 uppercase rounded-full hover:bg-buttonblue hover:text-grey hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border border-cyan-900 focus:outline-none bg-white text-black gap-x-2 font-ethnocentric"
           >
             Launch App
-            <Image
-              height={20}
-              width={20}
-              src="/images/sui_dark.svg"
-              alt="Wallet"
-              className={
-                "rounded-full border-blue justify-center text-center items-center"
-              }
-            />
+            
           </button>
         </div>
       </div>
-        <div className="w-full col-start-5 col-end-8 h-full p-0 m-0">
-          <Image src={"/images/logo.png"} height={500} width={350} alt={"minesweeper"} />
-        </div>
+        
     </div>
   )
 }

@@ -17,10 +17,10 @@ const networks = {
 };
 
 // Importa Navbar normalmente poiché non si prevede che utilizzi localStorage
-import Navbar from "../components/navbar/navbar.tsx";
+import Navbar from "../components/navbar/navbar";
 
 // Usa l'importazione dinamica per Plot e qualsiasi altro componente che dipende da WalletProvider
-const Plot = dynamic(() => import('../components/plot/plot.tsx'), {
+const Plot = dynamic(() => import('../components/plot/plot'), {
   ssr: false // Disabilita il rendering lato server per questo componente
 });
 

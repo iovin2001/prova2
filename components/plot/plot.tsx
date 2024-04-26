@@ -1,6 +1,10 @@
 import React from 'react';
 import { Paper, Typography, Grid, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import GroupIcon from '@mui/icons-material/Group';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
 
 // You can style the Paper component using MUI's styled utility
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -19,12 +23,12 @@ const StatsCard = ({ title, value, icon }) => (
 
 const StatsGroup = () => {
   // Replace these with actual values and icons
-  const stats = [
-    { title: 'Total Staked', value: '19,754', icon: <YourTotalStakedIcon /> },
-    { title: 'TVL (SUSD)', value: '$1,434,721.17', icon: <YourTVLIcon /> },
-    { title: 'SYAKU Distributed', value: '96,844,204.154', icon: <YourSYAKUIcon /> },
-    { title: 'SYAKU Daily Yield', value: '4', icon: <YourDailyYieldIcon /> },
-  ];
+const stats = [
+  { title: 'Total Staked', value: '19,754', icon: <GroupIcon /> },
+  { title: 'TVL (SUSD)', value: '$1,434,721.17', icon: <AccountBalanceIcon /> },
+  { title: 'SYAKU Distributed', value: '96,844,204.154', icon: <MonetizationOnIcon /> },
+  { title: 'SYAKU Daily Yield', value: '4', icon: <ShowChartIcon /> },
+];
 
   return (
     <Box sx={{ flexGrow: 1 }}>

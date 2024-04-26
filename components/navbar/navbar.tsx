@@ -214,32 +214,31 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
 
   return (
     <>
-      <nav className="navbar">
-        <div className="logo">
-          <Link href="https://www.apesuisociety.com" passHref>
-            <a>
-              <Image src={logo} alt="logo" width={60} height={60} />
-            </a>
-          </Link>
-        </div>
+    
+    <nav className="navbar">
+    <div className="logo">
+  <Link href="https://www.apesuisociety.com" passHref>
+    <a>
+      <Image src={logo} alt="logo" width={60} height={60} />
+    </a>
+  </Link>
+</div>
       <div className="nav-item">
         <a href="https://www.apesuisociety.com/apes.html" className="hover:text-gray-500">Apes</a>
         <a href="#" className="hover:text-gray-500">Migrate</a>
         <a href="#" className="hover:text-gray-500">More</a>
       </div>
+      <div className="nav-links">
       <NavigationMenu.Root className="NavigationMenuRoot top-2 text-blue">
       <NavigationMenu.List className="NavigationMenuList">
-
+        
 
         
- {
-  isPlace ? (
-    <div className="flex space-x-2">
-
-      <NavigationMenu.Item className='p-1' key="migrate-button-2">
-        <ConnectButton connectText="Connect" style={{ color: "#000000" }} />
-      </NavigationMenu.Item>
-    </div>
+        {
+          isPlace ? (
+            <NavigationMenu.Item className='p-1'>
+              <ConnectButton connectText = "Migrate" style={{ color: "#000000" }} />
+            </NavigationMenu.Item>
           )
             :
             (
@@ -255,7 +254,7 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
         <NavigationMenu.Viewport className="NavigationMenuViewport" />
       </div>
     </NavigationMenu.Root >
-        
+        </div>
        
      
       </nav>

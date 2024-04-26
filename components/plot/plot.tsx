@@ -22,7 +22,8 @@ const StyledPaper = styled(Paper, {
   padding: theme.spacing(2),
   textAlign: 'center',
   color: 'white',
-  backgroundColor: bgColor,
+  backgroundColor: `${bgColor}33`, // 33 is the hex value for 20% opacity
+  borderRadius: theme.shape.borderRadius,
 }));
 
 // Componente StatsCard

@@ -23,6 +23,18 @@ body {
   color: #fff;
 }
 /* suiet-wallet-kit-custom.css */
+
+.flex {
+  display: flex;
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem; /* 0.5rem è un esempio, regola il valore di spaziatura come desideri */
+}
+
+
+
+
 .connect-button {
   background-color: var(--wkit-accent-color) !important;
   color: var(--wkit-on-accent-rgb) !important;

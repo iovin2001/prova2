@@ -231,13 +231,9 @@ const DiscordSVG = () => (
         <a href="#" className="hover:text-gray-500">Migrate</a>
         <a href="#" className="hover:text-gray-500">More</a>
       </div>
-      <div className="nav-links">
       <NavigationMenu.Root className="NavigationMenuRoot top-2 text-blue">
       <NavigationMenu.List className="NavigationMenuList">
-        </div>
-
-        
-        {
+ {
   isPlace ? (
     <div className="flex space-x-2">
       <NavigationMenu.Item className='p-1 flex items-center' key="migrate-button-1">

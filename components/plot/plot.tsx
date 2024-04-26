@@ -38,7 +38,7 @@ const StatsGroup: React.FC = () => {
     { title: 'Total Staked', value: '19,754', Icon: <GroupIcon />, bgColor: '#24ab8c' },
     { title: 'TVL (SUSD)', value: '$1,434,721.17', Icon: <AccountBalanceIcon />, bgColor: '#248b8c' },
     { title: 'SYAKU Distributed', value: '96,844,204.154', Icon: <MonetizationOnIcon />, bgColor: '#148fb2' },
-    { title: 'SYAKU Daily Yield', value: '4', Icon: <ShowChartIcon />, bgColor: '#17c999' },
+    { title: 'SYAKU Daily Yield', value: '4', Icon: <ShowChartIcon />, bgColor: '#117c99' },
   ];
 
   return (

@@ -43,14 +43,10 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, Icon, bgColor }) =>
 const StatsGroup: React.FC = () => {
   // Array di dati per le statistiche
   const stats = [
-    { title: 'Total Staked', value: '19,754', Icon: <GroupIcon />, bgColor: '#33f4c8' },
-    { title: 'TVL (SUSD)', value: '$1,434,721.17', Icon: <AccountBalanceIcon />, bgColor: '#33c7c8' },
-    { title: 'SYAKU Distributed', value: '96,844,204.154', Icon: <MonetizationOnIcon />, bgColor: '#1dcdfe' },
-    {
-      title: 'Holder Verification',
-      Icon: <DiscordIcon />, // Sostituire con il vero logo di Discord
-      bgColor: '#18b1db',
-    },
+    { title: 'Total Staked', value: '0', Icon: <GroupIcon />, bgColor: '#33f4c8' },
+    { title: 'TVL (USD)', value: '$0', Icon: <AccountBalanceIcon />, bgColor: '#33c7c8' },
+    { title: '$ASS Distributed', value: '0', Icon: <MonetizationOnIcon />, bgColor: '#1dcdfe' },
+
   ];
 
   return (

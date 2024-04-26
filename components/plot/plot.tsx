@@ -11,17 +11,19 @@ interface StatsCardProps {
   title: string;
   value: string;
   Icon: React.ReactElement;
+  bgColor: string; // Aggiunto questo prop per lo sfondo
 }
 
-// Styled Paper component
-const StyledPaper = styled(Paper)(({ theme }) => ({
+// Styled Paper component with dynamic background color
+const StyledPaper = styled(Paper)(({ theme, bgColor }: { theme: any, bgColor: string }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: 'white', // Testo impostato su bianco
+  backgroundColor: bgColor, // Colore di sfondo dinamico
 }));
 
-const StatsCard: React.FC<StatsCardProps> = ({ title, value, Icon }) => (
-  <StyledPaper elevation={4}>
+const StatsCard: React.FC<StatsCardProps> = ({ title, value, Icon, bgColor }) => (
+  <StyledPaper elevation={4} bgColor={bgColor}>
     {Icon}
     <Typography variant="h6">{title}</Typography>
     <Typography variant="h4">{value}</Typography>
@@ -31,18 +33,23 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, Icon }) => (
 const StatsGroup: React.FC = () => {
   // Stats data array
   const stats = [
-    { title: 'Total Staked', value: '19,754', Icon: <GroupIcon /> },
-    { title: 'TVL (SUSD)', value: '$1,434,721.17', Icon: <AccountBalanceIcon /> },
-    { title: 'SYAKU Distributed', value: '96,844,204.154', Icon: <MonetizationOnIcon /> },
-    { title: 'SYAKU Daily Yield', value: '4', Icon: <ShowChartIcon /> },
+    { title: 'Total Staked', value: '19,754', Icon: <GroupIcon />, bgColor: '#33f4c8' },
+    { title: 'TVL (SUSD)', value: '$1,434,721.17', Icon: <AccountBalanceIcon />, bgColor: '#33c7c8' },
+    { title: 'SYAKU Distributed', value: '96,844,204.154', Icon: <MonetizationOnIcon />, bgColor: '#1dcdfe' },
+    { title: 'SYAKU Daily Yield', value: '4', Icon: <ShowChartIcon />, bgColor: '#18b1db' },
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 , paddingTop: '100px'}}>
+    <Box sx={{ flexGrow: 1, paddingTop: '100px' }}>
       <Grid container spacing={2}>
         {stats.map((stat, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
-            <StatsCard title={stat.title} value={stat.value} Icon={stat.Icon} />
+            <StatsCard
+              title={stat.title}
+              value={stat.value}
+              Icon={stat.Icon}
+              bgColor={stat.bgColor} // Applico il colore di sfondo
+            />
           </Grid>
         ))}
       </Grid>

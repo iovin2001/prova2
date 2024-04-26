@@ -236,8 +236,11 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
         
         {
           isPlace ? (
+             <NavigationMenu.Item className='p-1'>
+              <ConnectButton connectText = "Discord" style={{ color: "#000000" }} />
+            </NavigationMenu.Item>
             <NavigationMenu.Item className='p-1'>
-              <ConnectButton connectText = "Migrate" style={{ color: "#000000" }} />
+              <ConnectButton connectText = "Connect" style={{ color: "#000000" }} />
             </NavigationMenu.Item>
           )
             :

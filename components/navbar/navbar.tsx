@@ -259,7 +259,7 @@ const DiscordSVG = () => (
         <NavigationMenu.Viewport className="NavigationMenuViewport" />
       </div>
     </NavigationMenu.Root >
-        </div>
+        
        
      
       </nav>

@@ -213,7 +213,7 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
    // Correct dependencies
 
   return (
-    <>
+  
     
     <nav className="navbar">
     <div className="logo">

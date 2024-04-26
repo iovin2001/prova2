@@ -1,44 +1,58 @@
-import React from 'react';
-import './content.css';
+import * as React from 'react';
+import { AppBar, Toolbar, Typography, Container, Grid, Card, CardMedia, CardContent, CardActions, Button } from '@mui/material';
 
-export default function Plot() {
-  // Qui potresti voler definire il titolo o altre variabili dinamiche
-  const title = "Migration Information";
-
-  // Stili CSS inline per il titolo e i paragrafi
-  const titleStyle = {
-    color: '#69d9e7',
-    fontFamily: 'Ethnocentric',
-    fontSize: '16px',
-    marginBottom: '20px',
+export default function Dashboard() {
+  // Questo è un esempio e dovrebbe essere sostituito con i dati reali e la logica
+  const nft = {
+    name: "Yaku #7316",
+    dailyYield: "4.00",
+    totalYield: "47.84",
   };
-
-  const paragraphStyle = {
-    marginBottom: '20px',
-  };
-
-  // Componente di contenuto informativo
-  const content = (
-    <div className="content">
-   
-      <h2 style={titleStyle}>APE SUI SOCIETY - MIGRATION RULES</h2>
-      
-      <p style={paragraphStyle}>1) THE MIGRATION WILL BEGIN ON <b>APRIL 08 2024 AT 18:45 UTC </b> AND <b>THE DEADLINE WILL BE AFTER 33 DAYS AFTER THE START OF THE MIGRATION (ON 11 MAY AT 18:30 UTC).</b><br /></p>
-      <p style={paragraphStyle}>2) IF YOU HAVE YOUR BORED APE SUI CLUB OR MUTANT APE SUI CLUB LISTED, DELIST IT FROM THE MARKETPLACES TO MIGRATE TO APE SUI SOCIETY NFT.<br /></p>
-      <p style={paragraphStyle}>3) APE SUI SOCIETY NFTs THAT WON&apos;T BE MIGRATED BEFORE THE DEADLINE WILL BE BURNED, OR USED FOR FUTURE PROMOTIONS & REWARDS TO THE COMMUNITY.<br /></p>
-      <p style={paragraphStyle}>4) ALL THE BORED APE SUI CLUB & MUTANT APE SUI CLUB NFTs THAT WON&apos;T BE MIGRATED <b>WILL BE USELESS IN FUTURE AND WILL NOT RECEIVE ANY BENEFITS FROM FUTURE PROJECT DEVELOPMENTS (REWARDS, STAKING, AIRDROP, ETC...).</b><br /></p>
-      <p style={paragraphStyle}>5) IN ORDER TO MIGRATE YOU WILL NEED TO BURN YOUR BORED APE SUI CLUB OR MUTANT APE SUI CLUB NFTs WITHIN OUR WEBSITE.<br />
-        <b>NFTS MUST BE BURNED ONLY THROUGH OUR WEBSITE.</b></p><br />
-      <p style={paragraphStyle}>6) PRESS THE <b>“MIGRATE”</b> BUTTON TO BURN YOUR BASC/MASC NFTs. <b>THERE WILL BE A SMALL FEE OF 0.50 $SUI FOR EACH NFTS YOU&apos;LL GOING TO BURN.<br /></b>
-        AFTER DOING THE BURN YOU WILL AUTOMATICALLY RECEIVE THE NEW NFTs WITHIN 24-72 HOURS DIRECTLY INTO YOUR WALLET.</p>
-      <p style={paragraphStyle}>7) THE APE SUI SOCIETY COLLECTION WILL BE LISTED 72H AFTER THE START OF THE MIGRATION ON TRADEPORT</p>
-      <p style={paragraphStyle}>8) A SNAPSHOT WILL BE TAKEN OF THOSE WHO HAVE BURNED THEIR BASCs/MASCs IN THE FIRST 72H FORM THE START OF THE MIGRATION, WHICH WILL MAKE THEM AUTOMATICALLY ELIGIBLE FOR THE AIRDROP.</p>
-    </div>
-  );
 
   return (
-    <div className="justify-center text-center items-center mt-6">
-      {content}
-    </div>
+    <Container maxWidth="xl">
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            BUY YAKU $0.0155 | MARKET ⬆️
+          </Typography>
+          <Button color="inherit">Solana: $157.89</Button>
+          <Button color="inherit">Yaku/USDC $0.0155</Button>
+          <Button color="inherit">Ethereum: $3233.37</Button>
+        </Toolbar>
+      </AppBar>
+
+      {/* Content */}
+      <Grid container spacing={2} sx={{ marginTop: 2 }}>
+        {/* Left Column */}
+        <Grid item xs={12} md={4}>
+          <Card>
+            <CardMedia
+              component="img"
+              height="140"
+              image="/path-to-your-nft-image.jpg" // Replace with your NFT image path
+              alt={nft.name}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {nft.name}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {nft.dailyYield} / DAY
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Claim</Button>
+              <Button size="small">Unstake</Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        {/* Right Column */}
+        <Grid item xs={12} md={8}>
+          {/* Other data cards */}
+        </Grid>
+      </Grid>
+    </Container>
   );
 }

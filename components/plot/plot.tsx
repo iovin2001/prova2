@@ -35,9 +35,9 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, Icon, bgColor }) =>
 const StatsGroup: React.FC = () => {
   // Stats data array
   const stats = [
-    { title: 'Total Staked', value: '19,754', Icon: <GroupIcon />, bgColor: '#24ab8c' },
-    { title: 'TVL (SUSD)', value: '$1,434,721.17', Icon: <AccountBalanceIcon />, bgColor: '#248b8c' },
-    { title: 'SYAKU Distributed', value: '96,844,204.154', Icon: <MonetizationOnIcon />, bgColor: '#148fb2' },
+    { title: 'Total Staked', value: '0', Icon: <GroupIcon />, bgColor: '#24ab8c' },
+    { title: 'TVL (USD)', value: '$0', Icon: <AccountBalanceIcon />, bgColor: '#248b8c' },
+    { title: '$ASS Distributed', value: '0', Icon: <MonetizationOnIcon />, bgColor: '#148fb2' },
     { title: 'SYAKU Daily Yield', value: '4', Icon: <ShowChartIcon />, bgColor: '#117c99' },
   ];
 

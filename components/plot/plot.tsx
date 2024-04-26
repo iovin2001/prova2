@@ -38,7 +38,7 @@ const StatsGroup: React.FC = () => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 , paddingTop: '40px'}}>
       <Grid container spacing={2}>
         {stats.map((stat, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>

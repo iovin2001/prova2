@@ -15,7 +15,9 @@ interface StatsCardProps {
 }
 
 // Styled Paper component with dynamic background color
-const StyledPaper = styled(Paper)(({ theme, bgColor }: { theme: any, bgColor: string }) => ({
+const StyledPaper = styled(Paper, {
+  shouldForwardProp: (prop) => prop !== 'bgColor',
+})<{ bgColor: string }>(({ theme, bgColor }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   color: 'white', // Testo impostato su bianco

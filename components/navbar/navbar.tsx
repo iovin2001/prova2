@@ -239,14 +239,16 @@ const DiscordSVG = () => (
 
         
         {
-          isPlace ? (
-             <NavigationMenu.Item className='p-1'>
-                <DiscordSVG />
-              <ConnectButton connectText = "Discord" style={{ color: "#000000" }} />
-            </NavigationMenu.Item>
-            <NavigationMenu.Item className='p-1'>
-              <ConnectButton connectText = "Connect" style={{ color: "#000000" }} />
-            </NavigationMenu.Item>
+            isPlace ? (
+    <div className="flex space-x-2">
+      <NavigationMenu.Item className='p-1 flex items-center' key="migrate-button-1">
+        <DiscordSVG />
+        <ConnectButton connectText="Discord" style={{ color: "#000000" }} />
+      </NavigationMenu.Item>
+      <NavigationMenu.Item className='p-1' key="migrate-button-2">
+        <ConnectButton connectText="Connect" style={{ color: "#000000" }} />
+      </NavigationMenu.Item>
+    </div>
           )
             :
             (

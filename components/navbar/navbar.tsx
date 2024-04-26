@@ -236,14 +236,14 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
         
         {
           isPlace ? (
-             <>
-              <NavigationMenu.Item className='p-1'>
-                <ConnectButton connectText = "Migrate" style={{ color: "#000000" }} />
-              </NavigationMenu.Item>
-              <NavigationMenu.Item className='p-1' key="migrate-button-2">
-                <ConnectButton connectText="Migrate" style={{ color: "#000000" }} />
-              </NavigationMenu.Item>
-           </>
+    <div className="flex space-x-2"> {/* Aggiunge la classe flex e space-x-2 per lo spazio */}
+      <NavigationMenu.Item className='p-1' key="migrate-button-1">
+        <ConnectButton connectText="Migrate" style={{ color: "#000000" }} />
+      </NavigationMenu.Item>
+      <NavigationMenu.Item className='p-1' key="migrate-button-2">
+        <ConnectButton connectText="Migrate" style={{ color: "#000000" }} />
+      </NavigationMenu.Item>
+    </div>
           )
             :
             (

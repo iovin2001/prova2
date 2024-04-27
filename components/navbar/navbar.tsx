@@ -240,9 +240,10 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
             isPlace ? (
     <div className="flex space-x-2">
       <NavigationMenu.Item className='p-1 flex items-center' key="migrate-button-1">
-        
-<Image src={discord} alt="Discord" width={40} height={40} />
-        <ConnectButton connectText="Discord" style={{ color: "#000000" }} />
+   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <Image src={discord} alt="Discord" width={30} height={30} />
+      <ConnectButton connectText="Discord" style={{ color: "#000000", padding: '8px 16px' }} />
+    </div>
       </NavigationMenu.Item>
       <NavigationMenu.Item className='p-1' key="migrate-button-2">
         <ConnectButton connectText="Connect" style={{ color: "#000000" }} />

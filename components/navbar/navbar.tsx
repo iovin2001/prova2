@@ -239,7 +239,8 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
             isPlace ? (
     <div className="flex space-x-2">
       <NavigationMenu.Item className='p-1 flex items-center' key="migrate-button-1">
-        <Image src={discord} alt="logo" width={40} height={40} />
+        <Image src="/discord-icon-svgrepo-com.svg" alt="Discord" width={40} height={40} />
+
         <ConnectButton connectText="Discord" style={{ color: "#000000" }} />
       </NavigationMenu.Item>
       <NavigationMenu.Item className='p-1' key="migrate-button-2">

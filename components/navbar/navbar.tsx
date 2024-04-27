@@ -9,7 +9,7 @@ import { ConnectButton, useCurrentAccount, useSignAndExecuteTransactionBlock, us
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from './logo.png';
-import discord from './1.svg';
+import discord from './discord.png';
 import axios from 'axios';
 import { SuiClient } from '@mysten/sui.js/client';
 import type { SuiObjectRef, SuiObjectResponse } from '@mysten/sui.js/client';
@@ -239,7 +239,7 @@ const NavigationMenuDemo: React.FC<NavigationMenuDemoProps> = ({ isPlace, onCrea
             isPlace ? (
     <div className="flex space-x-2">
       <NavigationMenu.Item className='p-1 flex items-center' key="migrate-button-1">
-        <Image src="./1.svg" alt="Discord" width={40} height={40} />
+        <Image src="./discord.png" alt="Discord" width={40} height={40} />
 
         <ConnectButton connectText="Discord" style={{ color: "#000000" }} />
       </NavigationMenu.Item>

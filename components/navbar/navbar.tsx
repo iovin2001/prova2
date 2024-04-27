@@ -9,7 +9,7 @@ import { ConnectButton, useCurrentAccount, useSignAndExecuteTransactionBlock, us
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from './logo.png';
-import discord from './discord-icon-svgrepo-com.svg';
+import discord from './1.svg';
 import axios from 'axios';
 import { SuiClient } from '@mysten/sui.js/client';
 import type { SuiObjectRef, SuiObjectResponse } from '@mysten/sui.js/client';
